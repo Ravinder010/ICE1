@@ -56,6 +56,24 @@ public class CardTrick {
         
         //Then report the result here
         // add one luckcard hard code 2,clubs
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Spades");
+
+        boolean found = fasle;
+        for(Card card : magicHand){
+            if(Card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckycard.getSuit())){
+                found = true;
+                break;
+            }
+        }
+        if (found){
+            System.out.println("Congratulation! The lucky card is in the magic hand");
+        } else{
+            System.out.println("Sorry, The lucky card is not in the magic hand");
+        }
+        
     }
     
 }
